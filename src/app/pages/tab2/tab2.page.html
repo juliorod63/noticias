@@ -6,7 +6,8 @@
   </ion-toolbar>
 
 
-  <ion-segment scrollable mode="md">
+  <ion-segment scrollable mode="md"
+                          (ionChange)= "cambiaCategoria( $event)">
     <ion-segment-button mode="md"
                         *ngFor="let categoria of categorias" value="{{categoria}}">
       <ion-label text-capitalize>{{categoria}}</ion-label>
@@ -19,5 +20,7 @@
 
 
 <ion-content color="dark" >
- 
+
+ <app-noticias [noticias]="noticias"></app-noticias>
+
 </ion-content>
